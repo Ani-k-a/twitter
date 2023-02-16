@@ -68,11 +68,18 @@ button {
 
 .grid-container {
   display: grid;
+  grid-template-columns: 275px 598px 362px;
   width: 1237px;
   margin: auto;
+  grid-template-areas: 
+  "header main aside"
+  ". main .";
 }
 
 /* header */
+.header-section {
+  grid-area: header;
+}
 .logo {
   color: var(--accent-text-color);
   font-size: 29px;
@@ -86,5 +93,11 @@ button {
     font-weight: 700;
 }
 /* main */
+.main-section {
+  grid-area: main;
+}
 
-/* asside */
+/* aside */
+.aside-section {
+  grid-area: aside;
+}
