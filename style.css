@@ -74,6 +74,7 @@ button {
   grid-template-areas: 
   "header main aside"
   ". main .";
+  
 }
 
 /* header */
