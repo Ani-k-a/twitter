@@ -94,29 +94,33 @@ article {
 /* grid */
 
 .grid-container {
+  position: relative;
   display: grid;
-  grid-template-columns: 275px 598px 362px;
   width: 1237px;
-  height: 1134px;
-  margin: auto;
+  grid-template-columns: 275px 598px 362px;
+  grid-template-rows: 100vh 1fr;
   grid-template-areas:
     "header main aside"
     ". main .";
+    margin: auto;
 }
 
 /* header */
 .header-section {
+  position: fixed;
   grid-area: header;
   padding: 0px 10px 0px 10px;
   height: 100%;
   display: flex;
     justify-content: space-between;
     flex-direction: column;
+  
 }
 .logo {
   color: var(--accent-text-color);
   font-size: 29px;
   margin-bottom: 22px;
+  background-color: var(--white-text-color);
 }
 .logo-link {
   display: inline-block;
@@ -161,21 +165,33 @@ article {
 .twit_block-nikname {
   color: var(--second-text-color);
 }
+
 /* main */
 .main-section {
   grid-area: main;
+  box-shadow: 1px 0px 0px #EBEEF0;
 }
 .home {
+  position: fixed;
+  z-index: 2;
+  width: 598px;
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 1px 0px #ebeef0;
+  background-color: var(--white-text-color);
+  
 }
 .make_post {
+  position: fixed;
+  z-index: 2;
+  margin-top: 55px;
+  width: 598px;
   display: flex;
   box-shadow: 0px 1px 0px #ebeef0;
   padding: 10px 15px;
+  background-color: var(--white-text-color);
 }
 .make_post-block {
   display: flex;
@@ -191,6 +207,7 @@ article {
   font-size: 20px;
   margin-bottom: 5px;
   width: 100%;
+  box-shadow: 0px 1px 0px #EBEEF0;
 }
 .make_post-info {
   margin-bottom: 15px;
@@ -202,6 +219,18 @@ article {
   margin-right: 10px;
   color: var(--accent-text-color);
   font-size: 16px;
+}
+.wrapper {
+  position: fixed;
+  margin-top: 214px;
+  z-index: 2;
+  width: 598px;
+height: 12px;
+background: #F7F9FA;;
+box-shadow: 0px 1px 0px #EBEEF0;
+}
+.post_list {
+  margin-top: 230px;
 }
 .activity {
   display: flex;
@@ -223,6 +252,7 @@ article {
 }
 
 .article-like_box {
+  /* margin: 15px auto 10px 50px */
   padding-top: 15px;
   padding-left: 50px;
   padding-bottom: 10px;
@@ -239,6 +269,9 @@ article {
 }
 .twit_block-icon {
   margin-right: 10px;
+}
+.article-twit_box {
+position: relative;
 }
 .article-twit_block {
   display: flex;
@@ -293,15 +326,32 @@ margin-right: 80px;
 }
 /* aside */
 .aside-section {
+  position: relative;
   grid-area: aside;
+  
   padding: 4px 10px;
+}
+.aside-container {
+position: fixed;
+width: 362px;
+}
+.aside-input-block {
+  position: relative;
+  
 }
 .aside-input {
   background: var(--second-bg-color);
   border-radius: 22px;
   border: none;
-  padding: 10px;
+  padding: 10px 10px 10px 45px;
   width: 100%;
+}
+.aside-input-icon {
+  position: absolute;
+ left: 20px;
+    top: 11px;
+  color: var(--second-text-color);
+ 
 }
 .aside-block {
   margin-top: 15px;
@@ -344,4 +394,85 @@ color: var(--second-text-color);
   justify-content: space-between;
   padding: 10px 15px;
   box-shadow: 0px 1px 0px #EFF1F2;
+}
+
+
+/* Mobile */
+
+@media (max-width: 390px) {
+.header-section  {
+  position: relative;
+  overflow: hidden;
+}
+.header-section:hover .overlay{
+  transform: translateX(0);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform 250ms ease;
+  background-color: var(--white-text-color);
+}
+.header-twit_block, .aside-block, .make_post-info, .activity-list, .wrapper {
+  display: none;
+}
+.logo {
+  position: fixed;
+}
+.home {
+  position: fixed;
+  margin-left: 50px;
+  width: 336px;
+}
+/* .aside-input-block {
+  margin-top: 50px;
+  z-index: 3;
+} */
+.aside-section {
+  position: absolute;
+  z-index: 3;
+  margin-top: 50px;
+}
+.aside-container {
+  position:  static;
+}
+.grid-container {
+  width: 390px;
+  grid-template-columns: 1vw;
+  grid-template-rows: auto;
+  margin: auto;
+}
+.header-section, .main-section{
+  width: 390px;
+}
+.make_post {
+  width: 390px;
+  margin-top: 0px;
+  bottom: 0px;
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+.make_post-block {
+  flex-direction: row;
+}
+.make_post-input {
+  box-shadow: none;
+}
+.reactions-item:not(:last-child) {
+  margin-right: 30px;
+
+}
+.post_list {
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+.nav-icon { 
+  font-size: 8px;
+}
+.button-add {
+  margin-left: 2px;
+}
 }
