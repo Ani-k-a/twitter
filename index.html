@@ -31,12 +31,15 @@
             </nav>
             <button class="button button-tweet main" type="submit">Tweet</button>
         </div>   
-        <div class="header-twit_blog twit_blog">
-            <img src="./media/avatar-main.png" alt="Jack Daniels">
-            <div class="twit_blok-info">
-                <div class="twit_blok-name">Victor UX/UI</div>
-                <div class="twit_blok-nikname">&#64mvictoruxui</div>
+        <div class="header-twit_block twit_block">
+            <div class="twit-block-card">
+                <img class="twit_block-icon" src="./media/avatar-main.png" alt="Jack Daniels">
+                <div class="twit_block-info">
+                   <div class="twit_block-name">Victor UX/UI</div>
+                   <div class="twit_block-nikname">&#64mvictoruxui</div>
+                </div>
             </div>
+            <i class="fa-solid fa-ellipsis nav-icon"></i>
         </div>
     </header>
     <main class="main-section">
@@ -44,7 +47,7 @@
         <img src="./media/star.png" alt="star" width="18px" height="18px"></div> 
         <div class="make_post">
             <img class="make_post-img" src="./media/avatar-main.png" alt="Viktor Daniels" width="48px" height="48px">
-            <div>
+            <div class="make_post-block">
                 <input class="make_post-input"type="text" placeholder="Hello I’m a product designer">
                 <p class="make_post-info"><i class="fa-solid fa-earth-asia make_post-logo"></i>Everyone can reply</p>
                 <div class="activity">
@@ -67,24 +70,27 @@
                     <div class="twit_block">
                         <img class="twit_block-icon" src="./media/avatar-friend1.png" width="48px" height="48px" alt="Don Norman">
                         <div>
-                            <div>
-                                <div class="twit_blok article-twit_blok">
-                                    <div class="twit_blok-name article-twit_blok-name">Don Norman</div>
-                                    <div class="twit_blok-verified article-twit_blok-verified is-hiden"></div>
-                                    <div class="twit_blok-nikname article-twit_blok-nikname">&#64mjnd1er</div>
-                                    <div class="article-twit_blok-timer">1 min</div>
+                            <div >
+                                <div class="twit_block article-twit_block">
+                                    <div class="article-twit_block-small">
+                                        <div class="twit_block-name article-twit_block-name">Don Norman</div>
+                                        <div class="twit_block-verified article-twit_block-verified is-hiden"></div>
+                                        <div class="twit_block-nikname article-twit_block-nikname">&#64mjnd1er</div>
+                                        <div class="article-twit_block-timer">1 min</div>
+                                    </div>
+                                    <i class="fa-solid fa-ellipsis nav-icon"></i>
                                 </div>
-                                <p>The DesignLab is doing major work on Community-Driven Design, with several different variants. If you are working in this area, submit a paper to the DIS conference here in San Diego (see DesignLab posting below).... https://facebook.com/don.norman.18/... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam labore corrupti quisquam praesentium nobis vero accusantium mollitia voluptas facilis? Maxime ipsum magni ratione expedita quas distinctio assumenda, corporis repudiandae. Natus.
+                                <p class="article-post">The DesignLab is doing major work on Community-Driven Design, with several different variants. If you are working in this area, submit a paper to the DIS conference here in San Diego (see DesignLab posting below).... https://facebook.com/don.norman.18/... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam labore corrupti quisquam praesentium nobis vero accusantium mollitia voluptas facilis? Maxime ipsum magni ratione expedita quas distinctio assumenda, corporis repudiandae. Natus.
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aspernatur incidunt, expedita blanditiis accusantium recusandae quibusdam hic. Laudantium enim distinctio eligendi praesentium laborum ullam repudiandae quam ipsa. Dolores, facere ex? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus tenetur excepturi inventore quod ab consequatur cupiditate atque odit quo aut architecto, ipsam velit. Illo, velit! Laborum sint ullam numquam perferendis!
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam rem animi illo omnis! At, ducimus voluptatum obcaecati quibusdam vero incidunt dignissimos harum repudiandae distinctio praesentium aperiam, quaerat eligendi quisquam aspernatur.
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, ab! Sit modi aut nihil maiores dicta soluta voluptate alias in quasi possimus tempore, quis impedit esse rem suscipit similique voluptatem!
                                 </p>
                             </div> 
                             <ul class="reactions-list">
-                                <li><i class="fa-regular fa-message"></i><span>3</span></li>
-                                <li><i class="fa-solid fa-repeat"></i><span></span></li>
-                                <li><i class="fa-regular fa-heart"></i><span>16</span></li>
-                                <li><i class="fa-regular fa-share-from-square"></i><span></span></li>
+                                <li class="reactions-item"><i class="fa-regular fa-message reactions-icon"></i><span>3</span></li>
+                                <li class="reactions-item"><i class="fa-solid fa-repeat reactions-icon" reactions-item></i><span></span></li>
+                                <li class="reactions-item"><i class="fa-regular fa-heart reactions-icon" reactions-item></i><span>16</span></li>
+                                <li class="reactions-item"><i class="fa-regular fa-share-from-square reactions-icon" reactions-item></i><span></span></li>
                             </ul>
                         </div>
                     </div>
@@ -95,20 +101,23 @@
                     <img class="twit_block-icon" width="48px" height="48px" src="./media/avatar-friend2.png" alt="Product Hunt">
                     <div>
                         <div>
-                            <div class="twit_blok article-twit_blok">
-                                <div class="twit_blok-name article-twit_blok-name">Product Hunt 😸</div>
-                                <div class="twit_blok-verified article-twit_blok-verified"><i class="fa-solid fa-certificate"></i></div>
-                                <div class="twit_blok-nikname article-twit_blok-nikname">&#64mProductHunt</div>
-                                <div class="article-twit_blok-timer">5 min</div>
+                            <div class="twit_block article-twit_block">
+                                <div class="article-twit_block-small">
+                                    <div class="twit_block-name article-twit_block-name">Product Hunt 😸</div>
+                                    <div class="twit_block-verified article-twit_block-verified"><i class="fa-solid fa-certificate"></i></div>
+                                    <div class="twit_block-nikname article-twit_block-nikname">&#64mProductHunt</div>
+                                    <div class="article-twit_block-timer">5 min</div>
+                                </div>
+                                <i class="fa-solid fa-ellipsis nav-icon"></i>
                             </div>
                             <p>Congrats &#64mcollectedview for winning a Product Hunt T-shirt! DM us to claim your prize.</p>
-                            <img src="./media/post-img.jpg" alt="Congrats">
+                            <img class="post-img"src="./media/post-img.jpg" alt="Congrats">
                         </div> 
                         <ul class="reactions-list">
-                            <li><i class="fa-regular fa-message"></i><span>3</span></li>
-                            <li><i class="fa-solid fa-repeat"></i><span></span></li>
-                            <li><i class="fa-regular fa-heart"></i><span>16</span></li>
-                            <li><i class="fa-regular fa-share-from-square"></i><span></span></li>
+                            <li class="reactions-item"><i class="fa-regular fa-message reactions-icon"></i><span>3</span></li>
+                            <li class="reactions-item"><i class="fa-solid fa-repeat reactions-icon"></i><span></span></li>
+                            <li class="reactions-item"><i class="fa-regular fa-heart reactions-icon"></i><span>16</span></li>
+                            <li class="reactions-item"><i class="fa-regular fa-share-from-square reactions-icon"></i><span></span></li>
                         </ul>
                     </div>
                 </div>
@@ -119,19 +128,27 @@
                 <img class="twit_block-icon" width="48px" height="48px" src="./media/avatar-friend3.png" alt="Y Combinator">
                 <div>
                     <div>
-                        <div class="twit_blok article-twit_blok">
-                            <div class="twit_blok-name article-twit_blok-name">Y Combinator</div>
-                            <div class="twit_blok-verified article-twit_blok-verified is-hiden"></div>
-                            <div class="twit_blok-nikname article-twit_blok-nikname">&#64mycombinator</div>
-                            <div class="article-twit_blok-timer">15 min</div>
+                        <div class="twit_block article-twit_block">
+                            <div class="article-twit_block-small">
+                                <div class="twit_block-name article-twit_block-name">Y Combinator</div>
+                            <div class="twit_block-verified article-twit_block-verified is-hiden"></div>
+                            <div class="twit_block-nikname article-twit_block-nikname">&#64mycombinator</div>
+                            <div class="article-twit_block-timer">15 min</div>
                         </div>
-                        <p>YC W14's &#64mNooraHealth launched an NFT auction to save thousands of lives. Read why &#64mpaulg bid here: http://paulgraham.com/nft.html</p>
+                            
+                            <i class="fa-solid fa-ellipsis nav-icon"></i>
+                        </div>
+                        <p>YC W14's &#64mNooraHealth launched an NFT auction to save thousands of lives. Read why &#64mpaulg bid here: http://paulgraham.com/nft.html
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam et quam rerum veritatis fugiat velit aliquam. Illum sint, repellendus dolorum dolore ad, harum, quos sunt earum vero quasi deleniti temporibus.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias saepe expedita enim ipsa repellat est neque quaerat fuga nobis impedit, quasi suscipit officiis, labore, officia error corrupti consequatur at architecto?
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit minus eligendi accusamus aut dolorum rerum tenetur laudantium inventore amet ex. Ea reiciendis esse voluptatem animi nulla corporis architecto quisquam adipisci!
+                        </p>
                     </div> 
                     <ul class="reactions-list">
-                        <li><i class="fa-regular fa-message"></i><span>3</span></li>
-                        <li><i class="fa-solid fa-repeat"></i><span></span></li>
-                        <li><i class="fa-regular fa-heart"></i><span>16</span></li>
-                        <li><i class="fa-regular fa-share-from-square"></i><span></span></li>
+                        <li class="reactions-item"><i class="fa-regular fa-message reactions-icon"></i><span>3</span></li>
+                        <li class="reactions-item"><i class="fa-solid fa-repeat reactions-icon"></i><span></span></li>
+                        <li class="reactions-item"><i class="fa-regular fa-heart reactions-icon"></i><span>16</span></li>
+                        <li class="reactions-item"><i class="fa-regular fa-share-from-square reactions-icon"></i><span></span></li>
                     </ul>
                 </div>
             </div>
@@ -139,123 +156,100 @@
         </div>
     </main>
     <aside class="aside-section">
-        <input type="text" placeholder="Search Twitter">
-        <div>
-            <h2>What’s happening</h2>
+        <input class="aside-input" type="text" placeholder="Search Twitter">
+        <div class="aside-block">
+            <h2 class="title aside-title">What&#8217;s happening</h2>
             <ul>
-                <li>
+                <li class="aside-twit_block twit_block">
                     <div>
-                        <img src="./media/avatar-small.jpg" alt="Chin Li">
                         <div>Trending in Colombia</div>
-                        <div>This morning</div>
-                        <p>What’s happening</p>
+                        <p class="aside-twit-description">What’s happening</p>
+                        <div>16.9K Tweets</div>
                     </div>
-                    <img src="./media/post-small-img.jpg" alt="technology">
-                    <div>16.9K Tweets</div>
-                    <div>#GoodMorning</div>
+                    <i class="fa-solid fa-ellipsis aside-icon"></i> 
                 </li>
-                <li>
+                <li class="aside-twit_block twit_block">
                     <div>
-                        <img src="./media/avatar-small.jpg" alt="Chin Li">
                         <div>Trending in Colombia</div>
-                        <div>This morning</div>
-                        <p>What’s happening</p>
-                    </div>
-                    <img src="./media/post-small-img.jpg" alt="technology">
-                    <div>16.9K Tweets</div>
-                    <div>#GoodMorning</div>  
+                        <p class="aside-twit-description">What’s happening</p>
+                        <div>16.9K Tweets</div>
+                    </div> 
+                    <i class="fa-solid fa-ellipsis aside-icon"></i>
                 </li>
-                <li>
-                    <div>
-                        <img src="./media/avatar-small.jpg" alt="Chin Li">
+                <li class="aside-twit_block twit_block">
+                    <div> 
                         <div>Trending in Colombia</div>
-                        <div>This morning</div>
-                        <p>What’s happening</p>
+                        <p class="aside-twit-description">What’s happening</p>
+                        <div>16.9K Tweets</div>
                     </div>
-                    <img src="./media/post-small-img.jpg" alt="technology">
-                    <div>16.9K Tweets</div>
-                    <div>#GoodMorning</div>
-                </li>
-                <li>
-                    <div>
-                        <img src="./media/avatar-small.jpg" alt="Chin Li">
-                        <div>Trending in Colombia</div>
-                        <div>This morning</div>
-                        <p>What’s happening</p>
-                    </div>
-                    <img src="./media/post-small-img.jpg" alt="technology">
-                    <div>16.9K Tweets</div>
-                    <div>#GoodMorning</div>
-                </li>
-                <li>
-                    <div>
-                        <img src="./media/avatar-small.jpg" alt="Chin Li">
-                        <div>Trending in Colombia</div>
-                        <div>This morning</div>
-                        <p>What’s happening</p>
-                    </div>
-                    <img src="./media/post-small-img.jpg" alt="technology">
-                    <div>16.9K Tweets</div>
-                    <div>#GoodMorning</div>
+                    <i class="fa-solid fa-ellipsis aside-icon"></i>  
                 </li>
             </ul>
-            <a href="http://">Show more</a>
+            <a class="show-link" href="http://">Show more</a>
         </div>
-        <div>
-            <h2>Who to follow</h2>
+        <div class="aside-block">
+            <h2 class="title aside-title">Who to follow</h2>
             <ul>
-                <li>
-                    <div class="aside-twit_blog twit_blog">
-                        <img src="./media/avatar-subs1.jpg" alt="Elon Musk">
-                        <div class="twit_blok">
-                           <div class="twit_blok-name">Elon Musk</div>
-                           <div class="twit_blok-nikname">&#64melonmusk</div>
-                        </div>
-                        <button type="submit">Follow</button>
+                <li class="aside-twit_block twit_block">
+                    <div class="aside-twit_block-card twit_block-card">
+                        <img class="twit_block-icon" src="./media/avatar-subs1.png" alt="Elon Musk">
+                        <div class="twit_block-info">
+                           <div class="twit_block-name">Elon Musk</div>
+                           <div class="twit_block-nikname">&#64melonmusk</div>
+                        </div> 
                     </div>
+                    <button class="button-follow" type="submit">Follow</class=>
                 </li>
-                <li>
-                    <div class="aside-twit_blog twit_blog">
-                        <img src="./media/avatar-subs2.jpg" alt="Elon Musk">
-                        <div class="twit_blok">
-                           <div class="twit_blok-name">Dogecoin</div>
-                           <div class="twit_blok-nikname">&#64mdogecoin</div>
-                        </div>
-                        <button type="submit">Follow</button>
+                <li class="aside-twit_block twit_block">
+                    <div class="aside-twit_block-card twit_block-card">
+                        <img class="twit_block-icon" src="./media/avatar-subs2.png" alt="Dogecoin">
+                           <div class="twit_block-info">
+                              <div class="twit_block-name">Dogecoin</div>
+                              <div class="twit_block-nikname">&#64mdogecoin</div>
+                            </div>
                     </div>
+                    <button class="button-follow" type="submit">Follow</button>
                 </li>
             </ul>
-            <a href="http://">Show more</a>
+            <a class="show-link" href="http://">Show more</a>
         </div>
-        <div>
-            <h2>Topics to follow</h2>
+        <div class="aside-block">
+            <h2 class="title aside-title">Topics to follow</h2>
             <ul>
-                <li>
-                    <div>
-                        <div>UX Design</div>
-                        <p>Computer programming</p>
+                <li class="topics-card">
+                    <div class="topics-item">
+                        <div class="title topics-title">UX Design</div>
+                        <p class="topics-description">Computer programming</p>
                     </div>
-                    <button class="button button-follow" type="submit">Follow</button>
-                    <button>Х</button>
+                    <div>
+                        <button class="button button-follow" type="submit">Follow</button>
+                        <button class="button button-close">x</button>
+                    </div>
+                    
                 </li>
-                <li>
-                    <div>
-                        <div>Technology</div>
-                        <p>All about technology</p>
+                <li class="topics-card">
+                    <div class="topics-item">
+                        <div class="title topics-title">Technology</div>
+                        <p class="topics-description">All about technology</p>
                     </div>
-                    <button class="button button-follow" type="submit">Follow</button>
-                    <button>Х</button>
+                    <div>
+                        <button class="button button-follow" type="submit">Follow</button>
+                        <button class="button button-close">x</button>
+                    </div>
+                    
                 </li>
-                <li>
-                    <div>
-                        <div>Python</div>
-                        <p>Computer programming</p>
+                <li class="topics-card">
+                    <div class="topics-item">
+                        <div class="title topics-title">Python</div>
+                        <p class="topics-description">Computer programming</p>
                     </div>
-                    <button class="button button-follow" type="submit">Follow</button>
-                    <button>Х</button>
+                    <div>
+                        <button class="button button-follow" type="submit">Follow</button>
+                        <button class="button button-close">x</button>
+                    </div>
                 </li>
             </ul>
-            <a href="http://">Show more</a>
+            <a class="show-link"  href="http://">Show more</a>
         </div>
     </aside>
 </body>
