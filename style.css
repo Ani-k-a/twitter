@@ -159,6 +159,7 @@ article {
   margin-right: 10px;
 }
 .twit_block-name{
+  white-space: nowrap;
   margin-right: 5px;
   font-weight: 700;
 }
@@ -173,7 +174,7 @@ article {
 }
 .home {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   width: 598px;
   padding: 15px;
   display: flex;
@@ -185,7 +186,7 @@ article {
 }
 .make_post {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   margin-top: 55px;
   width: 598px;
   display: flex;
@@ -202,6 +203,7 @@ article {
   margin-right: 15px;
 }
 .make_post-input {
+  resize: none;
   border: none;
   padding: 10px 0;
   font-size: 20px;
@@ -223,14 +225,15 @@ article {
 .wrapper {
   position: fixed;
   margin-top: 214px;
-  z-index: 2;
+  z-index: 4;
   width: 598px;
 height: 12px;
 background: #F7F9FA;;
 box-shadow: 0px 1px 0px #EBEEF0;
 }
 .post_list {
-  margin-top: 230px;
+  margin-top: 227px;
+  position: relative;
 }
 .activity {
   display: flex;
@@ -253,10 +256,15 @@ box-shadow: 0px 1px 0px #EBEEF0;
 
 .article-like_box {
   /* margin: 15px auto 10px 50px */
+  position: sticky;
+  top:227px;
   padding-top: 15px;
   padding-left: 50px;
   padding-bottom: 10px;
+  background-color: var(--white-text-color);
+  z-index: 3;
 }
+
 .article-like_box:hover > .article-like_box-icon {
   color: #e91b1b;
 }
@@ -268,16 +276,23 @@ box-shadow: 0px 1px 0px #EBEEF0;
   padding: 10px 15px 15px 15px;
 }
 .twit_block-icon {
+  position: sticky;
+  top:271px;
   margin-right: 10px;
 }
 .article-twit_box {
-position: relative;
+  /* position: relative; */
 }
 .article-twit_block {
+  position: sticky;
+  top: 271px;
+  /* top: 285px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 0;
+  background-color: var(--white-text-color);
+  z-index: 2;
 }
 .article-twit_block-small {
   display: flex;
@@ -296,8 +311,11 @@ position: relative;
 }
 .article-twit_block-nikname {
   padding-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .article-twit_block-timer {
+  white-space: nowrap;
   color: var(--second-text-color);
 }
 .article-post {
@@ -328,12 +346,12 @@ margin-right: 80px;
 .aside-section {
   position: relative;
   grid-area: aside;
-  
   padding: 4px 10px;
+  
 }
 .aside-container {
-position: fixed;
-width: 362px;
+  position: fixed;
+  z-index: 2;
 }
 .aside-input-block {
   position: relative;
@@ -400,53 +418,64 @@ color: var(--second-text-color);
 /* Mobile */
 
 @media (max-width: 390px) {
-.header-section  {
+  .header-section {
+    z-index: 6;
+    padding: 0px;
+  }
+.overlay-container  {
   position: relative;
   overflow: hidden;
+  /* width: 30; */
+  height: 100%;
 }
-.header-section:hover .overlay{
-  transform: translateX(0);
-}
+
 .overlay {
   position: absolute;
+  z-index: 6;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 390px;
   height: 100%;
   transform: translateX(-100%);
   transition: transform 250ms ease;
   background-color: var(--white-text-color);
 }
+
+.overlay-container:hover > .overlay, .overlay-container:focus > .overlay{
+  transform: translateX(0);
+}
 .header-twit_block, .aside-block, .make_post-info, .activity-list, .wrapper {
   display: none;
 }
-.logo {
+.logo-link {
+  padding-bottom: 0px;
   position: fixed;
+  padding: 7px 19px 8px 20px;
+  background-color: var(--white-text-color);
 }
+.logo-icon {
+  font-size: 24px;
+}
+
 .home {
   position: fixed;
-  margin-left: 50px;
+  margin-left: 59px;
   width: 336px;
+  padding-left: 0px;
+  box-shadow: none;
 }
-/* .aside-input-block {
-  margin-top: 50px;
-  z-index: 3;
-} */
-.aside-section {
-  position: absolute;
-  z-index: 3;
-  margin-top: 50px;
+.article-like_box, .twit_block-icon, .article-twit_block {
+  position: static;
+
 }
-.aside-container {
-  position:  static;
-}
+
 .grid-container {
   width: 390px;
   grid-template-columns: 1vw;
   grid-template-rows: auto;
   margin: auto;
 }
-.header-section, .main-section{
+.header-section, .main-section, .aside-container{
   width: 390px;
 }
 .make_post {
@@ -459,20 +488,42 @@ color: var(--second-text-color);
   flex-direction: row;
 }
 .make_post-input {
+  font-size: 18px;
+  height: 48px;
+  padding: 0px;
   box-shadow: none;
+  margin-bottom: 0px;
 }
 .reactions-item:not(:last-child) {
   margin-right: 30px;
 
 }
 .post_list {
-  margin-top: 100px;
+  margin-top: 110px;
   margin-bottom: 70px;
 }
 .nav-icon { 
   font-size: 8px;
 }
 .button-add {
-  margin-left: 2px;
+  margin-left: 5px;
+}
+.article-twit_block-nikname {
+  width: 80px;
+}
+.aside-section {
+  position: fixed;
+  z-index: 5;
+  margin-top: 54px;
+  box-shadow: 0px -1px 0px #EFF1F2;
+  background-color: var(--white-text-color);
+  padding: 10px 16px;
+  width: 100%;
+}
+
+.aside-container {
+  background-color: var(--white-text-color);
+  padding: 10px 20px;
+  position:  static;
 }
 }
