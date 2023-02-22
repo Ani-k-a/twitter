@@ -282,10 +282,11 @@ article {
 .activity {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 .activity-list {
   display: flex;
-  width: 100%;
 }
 .activity-icon {
   color: var(--accent-text-color);
@@ -502,7 +503,7 @@ article:target .article-link_close {
   overflow: hidden;
 }
 .aside-list_1 {
-  height: 420px;
+  height: 252px;
 }
 .aside-list_2 {
   height: 147px;
@@ -641,6 +642,9 @@ color: var(--accent-text-color);
   .article-twit_block, .make_post-button, .make-post_box-img, .make-post_lable {
     position: static;
   }
+.activity{
+  margin-bottom: 0px;
+}
 
   .grid-container {
     width: 390px;
@@ -685,7 +689,7 @@ color: var(--accent-text-color);
   }
   .make-post_lable {
     margin-right: 50px;
-    width: 170px;
+    /* width: 170px; */
   }
   .reactions-item:not(:last-child) {
     margin-right: 30px;
